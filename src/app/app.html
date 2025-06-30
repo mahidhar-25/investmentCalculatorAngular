@@ -1,2 +1,5 @@
 <app-header />
-<app-user-input />
+<app-user-input (enableIntrestTable)="enableInterestTable($event)" />
+@if(showInterest){
+<app-investment-results />
+}

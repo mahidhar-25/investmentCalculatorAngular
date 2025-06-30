@@ -15,7 +15,7 @@
         name="initial-investment"
         id="initial-investment"
         placeholder="Amount"
-        [(ngModel)]="initialInvestment"
+        [(ngModel)]="investmentServices.userInput().initialInvestment"
         required
         class="w-full p-2 border border-[#76c0ae] rounded bg-transparent text-[#c2e9e0] text-base"
       />
@@ -33,7 +33,7 @@
         name="Annual-investment"
         id="Annual-investment"
         placeholder="Annual Investment"
-        [(ngModel)]="annualInvestment"
+        [(ngModel)]="investmentServices.userInput().annualInvestment"
         required
         class="w-full p-2 border border-[#76c0ae] rounded bg-transparent text-[#c2e9e0] text-base"
       />
@@ -51,7 +51,7 @@
         name="expected-return"
         id="expected-return"
         placeholder="Expected Return"
-        [(ngModel)]="expectedReturn"
+        [(ngModel)]="investmentServices.userInput().expectedReturn"
         required
         class="w-full p-2 border border-[#76c0ae] rounded bg-transparent text-[#c2e9e0] text-base"
       />
@@ -69,7 +69,7 @@
         name="Duration"
         id="Duration"
         placeholder="Duration"
-        [(ngModel)]="duration"
+        [(ngModel)]="investmentServices.userInput().duration"
         required
         class="w-full p-2 border border-[#76c0ae] rounded bg-transparent text-[#c2e9e0] text-base"
       />

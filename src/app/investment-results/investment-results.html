@@ -1,0 +1,26 @@
+<table
+  class="max-w-[50rem] w-full mx-auto my-8 p-4 table-fixed border-separate border-spacing-4 text-right"
+>
+  <thead>
+    <tr class="text-[0.7rem] text-[#83e6c0]">
+      <th>Year</th>
+      <th>Investment Value</th>
+      <th>Interest (Year)</th>
+      <th>Total Interest</th>
+      <th>Invested Capital</th>
+    </tr>
+  </thead>
+  <tbody
+    class="font-['Roboto_Condensed',sans-serif] text-[0.85rem] text-[#c2e9e0]"
+  >
+    @for (investmentData of getInterestData(); track investmentData.year) {
+    <tr>
+      <td>{{ investmentData.year }}</td>
+      <td>\${{ investmentData.valueEndOfYear.toFixed(2) }}</td>
+      <td>\${{ investmentData.interest.toFixed(2) }}</td>
+      <td>\${{ investmentData.totalInterest.toFixed(2) }}</td>
+      <td>\${{ investmentData.totalAmountInvested.toFixed(2) }}</td>
+    </tr>
+    }
+  </tbody>
+</table>
