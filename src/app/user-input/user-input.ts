@@ -23,6 +23,7 @@ export class UserInputComponent {
     this.enableIntrestTable.emit(true);
   }
   userInput(): UserInput {
+    //you should not use fields inside a service because it is only manupulated by one component
     return this.investmentServices.userInput();
   }
 }
