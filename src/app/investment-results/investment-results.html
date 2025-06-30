@@ -1,3 +1,9 @@
+@if (getInterestData().length === 0) {
+<p colspan="5" class="mx-auto w-full text-center py-4 text-sm text-[#a0b8b0]">
+  No interest data. Please enter values.
+</p>
+} @else{
+
 <table
   class="max-w-[50rem] w-full mx-auto my-8 p-4 table-fixed border-separate border-spacing-4 text-right"
 >
@@ -24,3 +30,4 @@
     }
   </tbody>
 </table>
+}

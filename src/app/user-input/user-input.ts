@@ -1,6 +1,7 @@
 import { Component, inject, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { investmentServices } from '../app.services';
+import { UserInput } from './user.model';
 export interface AnnualInvestmentData {
   year: number;
   interest: number;
@@ -15,10 +16,13 @@ export interface AnnualInvestmentData {
   imports: [FormsModule],
   templateUrl: './user-input.html',
 })
-export class UserInput {
-  public investmentServices = inject(investmentServices);
+export class UserInputComponent {
+  private investmentServices = inject(investmentServices);
   enableIntrestTable = output<boolean>();
   onCalculate() {
     this.enableIntrestTable.emit(true);
+  }
+  userInput(): UserInput {
+    return this.investmentServices.userInput();
   }
 }
