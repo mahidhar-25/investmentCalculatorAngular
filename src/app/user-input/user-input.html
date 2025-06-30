@@ -1,0 +1,85 @@
+<form
+  (ngSubmit)="onCalculate()"
+  class="p-4 max-w-[30rem] mx-auto my-8 rounded bg-gradient-to-b from-[#307e6c] to-[#2b996d] shadow-md"
+>
+  <div class="flex flex-wrap gap-6">
+    <div class="flex-1 min-w-[12rem]">
+      <label
+        for="initial-investment"
+        class="block mb-1 text-[0.5rem] font-bold uppercase font-['Roboto_Condensed',sans-serif]"
+      >
+        Initial Investment
+      </label>
+      <input
+        type="number"
+        name="initial-investment"
+        id="initial-investment"
+        placeholder="Amount"
+        [(ngModel)]="initialInvestment"
+        required
+        class="w-full p-2 border border-[#76c0ae] rounded bg-transparent text-[#c2e9e0] text-base"
+      />
+    </div>
+
+    <div class="flex-1 min-w-[12rem]">
+      <label
+        for="Annual-investment"
+        class="block mb-1 text-[0.5rem] font-bold uppercase font-['Roboto_Condensed',sans-serif]"
+      >
+        Annual Investment
+      </label>
+      <input
+        type="number"
+        name="Annual-investment"
+        id="Annual-investment"
+        placeholder="Annual Investment"
+        [(ngModel)]="annualInvestment"
+        required
+        class="w-full p-2 border border-[#76c0ae] rounded bg-transparent text-[#c2e9e0] text-base"
+      />
+    </div>
+
+    <div class="flex-1 min-w-[12rem]">
+      <label
+        for="expected-return"
+        class="block mb-1 text-[0.5rem] font-bold uppercase font-['Roboto_Condensed',sans-serif]"
+      >
+        Expected Return
+      </label>
+      <input
+        type="number"
+        name="expected-return"
+        id="expected-return"
+        placeholder="Expected Return"
+        [(ngModel)]="expectedReturn"
+        required
+        class="w-full p-2 border border-[#76c0ae] rounded bg-transparent text-[#c2e9e0] text-base"
+      />
+    </div>
+
+    <div class="flex-1 min-w-[12rem]">
+      <label
+        for="Duration"
+        class="block mb-1 text-[0.5rem] font-bold uppercase font-['Roboto_Condensed',sans-serif]"
+      >
+        Duration
+      </label>
+      <input
+        type="number"
+        name="Duration"
+        id="Duration"
+        placeholder="Duration"
+        [(ngModel)]="duration"
+        required
+        class="w-full p-2 border border-[#76c0ae] rounded bg-transparent text-[#c2e9e0] text-base"
+      />
+    </div>
+  </div>
+
+  <button
+    type="submit"
+    class="mt-6 w-full p-2 border border-[#76c0ae] rounded bg-[#83e6c0] text-[#1a1f1d] text-base font-bold uppercase hover:bg-[#aaf1d6] transition-colors"
+  >
+    Calculate
+  </button>
+</form>
